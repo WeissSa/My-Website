@@ -1,0 +1,29 @@
+<div class="top">
+  <h1><%= @article.title%> </h1>
+</div>
+
+<div class="desc">
+  <img src="<%= @article.thumbnail %>" alt="<%= @article.title%>">
+  <p class="project-description"> <%= @article.body %></p>
+</div>
+<div class="github-link">
+  <a href= <%= @article.github %>> Link to github repo </a>
+</div>
+
+<div class="comment-section">
+  <h2>Add a comment:</h2>
+  <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p>
+      <%= form.label :commenter %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+
+</div>

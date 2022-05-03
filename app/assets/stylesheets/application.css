@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*. {
+   display: flex;
+}
+
+body{
+    background-color:  #a690bc;
+}
+
+
+/* Title CSS */
+
+.top{
+    background-color: #663f74;
+}
+
+.top h1{
+    color: #EFEFEF;
+    text-align: center;
+    margin-left: -9%;
+}
+
+@media (max-width: 1000px){
+    .top h1{
+        margin-left: 5px;
+    }
+}
+
+/* Content CSS */
+
+.middle{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    margin-left: -11%;
+}
+
+.article-title{
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: x-large;
+}
+
+.thumbnail{
+    width: 20vw;
+    height: 10vw;
+}
+
+@media (max-width:1000px){
+    .thumbnail{
+        width: 50%;
+        height: 25%;
+    }
+}
+
+/* Article Pages */
+
+.desc{
+    width: 90%;
+    height: 70%;
+}
+
+.desc p{
+    width: 45%;
+    position: absolute;
+
+}
+
+.desc img{
+    width: 30%;
+    position: absolute;
+    margin-left: 50%;
+}
+
+.github-link{
+    margin-top: 25%;
+    text-align: center;
+}
+
+@media (max-width: 1000px){
+    .desc img{
+        width: 40%;
+        margin-left: 50%;
+        margin-top: 20%;
+    }
+    .github-link{
+        margin-top: 110%;
+    }
+}
+
+/* Comment Section */
+
+.comment-section{
+    align-items: center;
+    text-align: center;
+}
+

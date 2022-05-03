@@ -1,0 +1,21 @@
+
+<div class="top">
+  <h1>Samuel Weissite</h1>
+</div>
+
+<div class="middle">
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <div class="article-title">
+          <div>
+            <%= link_to article.title, article %>
+          </div>
+          <a href="<%= article_path(article) %>">
+          <img src="<%= article.thumbnail %>" alt="Picture related to <%= article.title %>" class="thumbnail">
+          </a>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
