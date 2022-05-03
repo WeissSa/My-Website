@@ -110,5 +110,32 @@ ul{
 .comment-section{
     align-items: center;
     text-align: center;
+    font-family: arial, sans-serif;
 }
+
+
+/*Button modified from https://fdossena.com/?p=html5cool/buttons/i.frag
+Thanks to Federico Dossena
+*/
+
+.f-button{
+    font-size: medium;
+    display:inline-block;
+    border:0.2em solid #663f74;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: arial, sans-serif;
+    font-weight:300;
+    color: #2E2F30;
+    background-color: #a690bc;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.f-button:hover{
+    color: #a690bc;
+    background-color:#663f74;
+}
+
 
