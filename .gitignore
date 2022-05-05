@@ -13,7 +13,7 @@
 # Used by dotenv library to load environment variables.
 # .env
 
-
+cred.json
 ## Documentation cache and generated files:
 /.yardoc/
 /_yardoc/

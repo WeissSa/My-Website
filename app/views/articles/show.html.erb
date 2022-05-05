@@ -2,6 +2,12 @@
   <h1><%= @article.title%> </h1>
 </div>
 
+<% flash.each do |type, msg| %>
+  <div class="flash">
+    <%= msg %>
+  </div>
+<% end %>
+
 <div class="desc">
   <img src="<%= @article.thumbnail %>" alt="<%= @article.title%>">
   <p class="project-description"> <%= @article.body %></p>
@@ -10,9 +16,13 @@
   <a href= <%= @article.github %>> Link to github repo </a>
 </div>
 
+
+  <h2 style="text-align: center; margin-left: 15%;"> <%= @article.comments.public_count %> comments:</h2>
+  <%= render @article.comments %>
+
 <div class="comment-section">
   <h2>Add a comment:</h2>
-  <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+  <%= form_with model: [ @article, @article.comments.build] do |form|%>
     <p>
       <%= form.label :commenter %><br>
       <%= form.text_field :commenter %>
@@ -22,8 +32,12 @@
       <%= form.text_area :body %>
     </p>
     <p>
+      <%= form.label :status %><br>
+      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </p>
+
+    <p>
       <%= form.submit class:"f-button"%>
     </p>
   <% end %>
-
 </div>

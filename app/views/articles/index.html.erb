@@ -1,11 +1,11 @@
-
 <div class="top">
-  <h1>Samuel Weissite</h1>
+  <h1>Projects</h1>
 </div>
 
 <div class="middle">
   <ul>
-    <% @articles.each do |article| %>
+    <% @articles.reverse_each do |article| %>
+      <% unless article.archived? %>
       <li>
         <div class="article-title">
           <div>
@@ -16,6 +16,7 @@
           </a>
         </div>
       </li>
+      <% end %>
     <% end %>
   </ul>
 </div>
