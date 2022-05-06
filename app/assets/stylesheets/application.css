@@ -30,14 +30,16 @@ body{
     background-color: #2E2F30;
     color: #a690bc;
     width: 15%;
-    height: 100vh;
+    height: 130vh;
     overflow-y: auto;
     text-align: center;
     float: left;
-    position: sticky;
-    top: 0;
-    left: 0;
     word-wrap: break-word;
+}
+
+.sidebar-inside{
+    position: fixed;
+    width: 15%;
 }
 
 .sidebar h1{
@@ -46,6 +48,7 @@ body{
 .sidebar h2{
     font-size: medium;
 }
+
 @media (max-width: 1000px){
     .sidebar h1{
         font-size: 3vw;
@@ -88,7 +91,6 @@ body{
 
 ul{
     list-style: none;
-    margin-left: -11%;
 }
 
 .article-title{
