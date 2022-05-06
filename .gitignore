@@ -26,3 +26,5 @@ cred.json
 /lib/bundler/man/
 
 .idea/workspace.xml
+
+/config/master.key
