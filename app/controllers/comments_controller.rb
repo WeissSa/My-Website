@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "Hackerman", password: "secret", only: [:destroy, :show, :index]
+  http_basic_authenticate_with name: "Hackerman", password: "secret", only: :destroy
   # Note: This is not a secure password system, but I am just using it so the delete option is not easily accessible
   def create
     @article = Article.find(params[:article_id])
